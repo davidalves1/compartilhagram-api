@@ -26,4 +26,6 @@ app.use(require('./routes'))
 
 const port = process.env.PORT || 5000
 
+console.log(`The magic happens on port ${port}`)
+
 server.listen(port)

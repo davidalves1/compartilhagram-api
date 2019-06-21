@@ -27,14 +27,14 @@ module.exports = {
 
     fs.unlinkSync(req.file.path)
 
-    const response = await Post.create({
+    const post = await Post.create({
       ...req.body,
       image: fileName
     })
 
     req.io.emit('post', post)
 
-    return res.json(response)
+    return res.json(post)
   },
   async update(req, res) {},
   async delete(req, res) {},
